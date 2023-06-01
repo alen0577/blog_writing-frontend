@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Contact Us
+{% endblock %}
+
+
+{% block body %}
+{% include 'navbar.html' %}
+<style>
+    body{
+        background-color: rgb(9, 9, 29);
+        text-decoration: none;
+        font-family: cursive;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    p{
+        text-align: justify;
+    }
+</style>
+
+
+
+
+<section id="section1">
+    <img src="{% static 'images/car4.png' %}" class="img-fluid w-100" alt="...">
+
+</section>
+
+<section>
+    <div class="row mt-5 mb-5">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <div class="container border-2 border-black">
+                
+                <h2 class="card-title text-center mt-3 mb-3 text-white"><b>Contact Us </b></h2>
+                <p class="card-text text-white"></p>
+                <p class="card-text text-white">
+                    We would love to hear from you ! <br><br>
+                    If you have any questions, suggestions, or feedback, please don't hesitate to reach out to us using the contact information provided below. Our team is dedicated to providing the best possible experience for our readers, and we value your input.
+
+                   General Inquiries
+                    For general inquiries or information about our blog, <br>
+                    please contact us at: <br>
+
+                 Email: info@yourblogwebsite.com <br>
+                 Phone: +1 (123) 456-7890 <br><br>
+                 Advertising and Partnerships <br>
+                 If you are interested in advertising opportunities or potential partnerships, please get in touch with our marketing team: <br>
+
+                 Email: advertising@yourblogwebsite.com <br><br>
+                 Content Submissions <br>
+                 We welcome guest posts and contributions from writers who are passionate about our blog's topics. If you would like to submit a guest post or contribute to our blog, please email us at: <br>
+
+                 Email: submissions@yourblogwebsite.com <br><br>
+                 Report an Issue <br>
+                   If you encounter any technical issues or problems while using our website, please let us know so we can assist you. Report any issues to: <br>
+
+                 Email: support@yourblogwebsite.com
+                </p>
+                
+
+
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</section>
+<hr style="color: rgb(255, 255, 255);">
+<section id="sectionlast">
+    <div class="container mt-5 ">
+      <div class="row">
+        <div class="col-lg-4 col-md-4">
+          <h5 class="text-title" style="color: rgb(255, 255, 255);margin-top: 50px;">Quick links</h5>
+          <ul>
+            <li style="color: rgb(255, 255, 255);"><a href="/" style="color: rgb(255, 255, 255);text-decoration: none;">Home</a></li>
+            <li style="color: rgb(255, 255, 255);"><a href="#" style="color: rgb(255, 255, 255);text-decoration: none;">About Us</a></li>
+            <li style="color: rgb(255, 255, 255);"><a href="#" style="color: rgb(255, 255, 255);text-decoration: none;">Contact Us</a></li>
+            <li style="color: rgb(255, 255, 255);"><a href="#" style="color: rgb(255, 255, 255);text-decoration: none;">Privacy Policy</a></li>
+            <li style="color: rgb(255, 255, 255);"><a href="#" style="color: rgb(255, 255, 255);text-decoration: none;">Terms & Condition</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <h5 class="text-title" style="color: rgb(255, 255, 255);margin-top: 50px;">Contact</h5>
+          <ul>
+            <li style="color: rgb(255, 255, 255);"><a href="#" style="color: rgb(255, 255, 255);text-decoration: none;"><i class="bi bi-geo m-2"></i>Banglore</a></li>
+            <li style="color: rgb(255, 255, 255);"><a href="#" style="color: rgb(255, 255, 255);text-decoration: none;"><i class="bi bi-telephone m-2"></i>0481-0772255</a></li>
+            <li style="color: rgb(255, 255, 255);"><a href="#" style="color: rgb(255, 255, 255);text-decoration: none;"><i class="bi bi-instagram m-2"></i><i class="bi bi-facebook m-2"></i><i class="bi bi-twitter m-2"></i><i class="bi bi-linkedin m-2"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <h5 class="text-title" style="color: rgb(255, 255, 255);margin-top: 50px;">Connect with Us</h5>
+         
+          <p style="color: rgb(255, 255, 255);"><p style="color: rgb(255, 255, 255);text-decoration: none;">Subscribe our email for <br>more updates </p></p>
+          <p style="color: rgb(255, 255, 255);">
+            <nav class="navbar">
+              <div class="container-fluid" style="background: transparent;">
+                <form class="d-flex" role="search">
+                  <input class="text-dark me-2" type="search" style="border: solid 1px aqua; background-color: white;" placeholder="Email" aria-label="Search">
+                  <button class="btn btn-outline-info" type="submit">Subscribe</button>
+                </form>
+              </div>
+              
+            </nav>
+          </p>
+                 
+          
+        </div>
+      </div>
+    </div>
+  
+  
+  <div class="card-footer" style="height: 45px; background-color: rgb(12, 12, 30);">
+    <p class="text-white text-center"><i class="bi bi-info-circle"></i>Myblog.com | All rights reserved | myblog@gmail.com</p>
+  </div>
+  
+</section> 
+
+
+
+{% endblock %}

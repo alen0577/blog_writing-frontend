@@ -1,0 +1,282 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+MyBlog-home
+{% endblock %}
+
+
+{% block body %}
+{% include 'navbar.html' %}
+<style>
+    body{
+        background-color: rgb(9, 9, 29);
+        text-decoration: none;
+        font-family: cursive;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .card img {
+      
+      opacity: .9;
+    }
+
+    .card:hover img {
+      opacity: 1;
+    }
+    .card {
+     
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+    }
+</style>
+<section id="section0">
+    <div class="container-fluid">
+        {% include 'carousel.html' %}
+
+    </div>
+   
+    
+</section>
+<section id="section1">
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="text-white mt-2">Recent Posts</h4>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-4">
+                <div class="card mt-3 mb-5" style="width: 18rem;background-color: rgb(250, 250, 250);">
+                    <img src="{% static 'images/tb1.jpg' %}" class="card-img-top img-thumbnail" style="height: 180px;" alt="...">
+                    <div class="card-body ">
+                        <h6 class="card-title"><b>Travel to dreams</b></h6>
+                        <p class="card-text d-inline-block"><small class="text-dark">Like:15</small></p>
+                        <p class="card-text d-inline-block ms-lg-3"><small class="text-dark">Share:3</small></p>
+                        <p class="card-text"><small class="text-dark">Category:Travel</small></p>
+
+                        <p class="card-text"><small class="text-body-tertiary">5 mins ago</small></p>
+                        <a href="{% url 'blogview' %}" class="link-success" >Read more...</a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card mt-3 mb-5" style="width: 18rem;background-color: rgb(250, 250, 250);">
+                    <img src="{% static 'images/hb1.jpg' %}" class="card-img-top img-thumbnail" style="height: 180px;" alt="...">
+                    <div class="card-body ">
+                        <h6 class="card-title"><b>Health is wealth</b></h6>
+                        <p class="card-text d-inline-block"><small class="text-dark">Like:250</small></p>
+                        <p class="card-text d-inline-block ms-lg-3"><small class="text-body-dark">Share:45</small></p>
+                        <p class="card-text"><small class="text-dark">Category:Food</small></p>
+
+                        <p class="card-text"><small class="text-body-tertiary">1 day ago</small></p>
+                        <a href="#" class="link-success" >Read more...</a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card mt-3 mb-5" style="width: 18rem;background-color: rgb(250, 250, 250);">
+                    <img src="{% static 'images/tb2.jpg' %}" class=" img-thumbnail" style="height: 180px;" alt="...">
+                    <div class="card-body ">
+                        <h6 class="card-title"><b>To travel is to live</b></h6>
+                        <p class="card-text d-inline-block"><small class="text-dark">Like:1.5k</small></p>
+                        <p class="card-text d-inline-block ms-lg-3"><small class="text-dark">Share:255</small></p>
+                        <p class="card-text"><small class="text-dark">Category:Travel & Food</small></p>
+
+                        <p class="card-text"><small class="text-body-tertiary">2 days ago</small></p>
+                        <a href="#" class="link-success" >Read more...</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+<section id="section2" style="background-color: rgb(12, 12, 30);">
+    <div class="container mt-3">
+        <div class="row">
+
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h4  class="text-white mt-2">Featured Posts</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card mb-3 mt-3 shadow p-3 mb-5 rounded" style="max-width: 540px;background-color: rgb(250, 250, 250);">
+                            <div class="row g-0">
+                              <div class="col-md-5">
+                                <img src="{% static 'images/fb4.jpg' %}" class="img-fluid " alt="...">
+                              </div>
+                              <div class="col-md-7">
+                                <div class="card-body">
+                                  <h6 class="card-title"><b>Adventure is out there.</b></h6>
+                                  <p class="card-text"><small class="text-dark">Published:Jan-01-2023</small></p>
+                                  <p class="card-text d-inline-block"><small class="text-dark">Like:1.5M</small></p>
+                                  <p class="card-text d-inline-block ms-lg-3"><small class="text-dark">Share:5.5k</small></p>
+                                  <p class="card-text">This is a wider card with supporting text below as a natural...</p>
+                                  <a href="#" class="link-success" >Read more</a>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card mb-3 mt-3 shadow p-3 mb-5  rounded" style="max-width: 540px;background-color: rgb(250, 250, 250);">
+                            <div class="row g-0">
+                              <div class="col-md-5">
+                                <img src="{% static 'images/fb5.jpg' %}" class="img-fluid " alt="...">
+                              </div>
+                              <div class="col-md-7">
+                                <div class="card-body">
+                                  <h6 class="card-title"><b>Don't go bacon my heart</b></h6>
+                                  <p class="card-text"><small class="text-dark">Published:feb-01-2023</small></p>
+                                  <p class="card-text d-inline-block"><small class="text-dark">Like:1M</small></p>
+                                  <p class="card-text d-inline-block ms-lg-3"><small class="text-dark">Share:2.5k</small></p>
+                                  <p class="card-text">This is a wider card with supporting text below as a natural...</p>
+                                  <a href="#" class="link-success" >Read more</a>
+                                  
+                                </div>                              
+                              </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+              <div class="row">
+                <div class="container-fluid mt-3 mb-3">
+
+                  <div class="card rounded mt-2 mb-5 border-3 border-dark" style="width: 18rem; background-color:rgb(250, 250, 250);">
+    
+                    <div class="card-body">
+                      <h6 class="card-title"><b>Popular Posts</b></h6>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item" style="background-color: rgb(250, 250, 250)">
+
+                        <table class="table" style="background-color: rgb(250, 250, 250)">
+                            
+                            <tbody>
+                                <td><a href="">Adventure is out there</a></td>
+                                
+                            </tbody>
+                            <tbody>
+                                <td><a href="">Don't go bacon my heart</a></td>
+                                
+                            </tbody>
+                            <tbody>
+                                <td><a href="">To travel is to live</a></td>
+                                
+                            </tbody>
+                            <tbody>
+                              <td><a href="">Health is wealth</a></td>
+                              
+                          </tbody>
+                          <tbody>
+                            <td><a href="">Travel to dreams</a></td>
+                            
+                        </tbody>
+                        </table>
+                        
+                      </li>
+                     
+                      
+                    </ul>
+                    
+
+                  </div>
+
+
+                   
+
+                </div>
+              </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="sectionlast">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4">
+          <h5 class="text-title" style="color: rgb(255, 255, 255);margin-top: 50px;">Quick links</h5>
+          <ul>
+            <li style="color: rgb(255, 255, 255);"><a href="/" style="color: rgb(255, 255, 255);text-decoration: none;">Home</a></li>
+            <li style="color: rgb(255, 255, 255);"><a href="#" style="color: rgb(255, 255, 255);text-decoration: none;">About Us</a></li>
+            <li style="color: rgb(255, 255, 255);"><a href="#" style="color: rgb(255, 255, 255);text-decoration: none;">Contact Us</a></li>
+            <li style="color: rgb(255, 255, 255);"><a href="#" style="color: rgb(255, 255, 255);text-decoration: none;">Privacy Policy</a></li>
+            <li style="color: rgb(255, 255, 255);"><a href="#" style="color: rgb(255, 255, 255);text-decoration: none;">Terms & Condition</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <h5 class="text-title" style="color: rgb(255, 255, 255);margin-top: 50px;">Contact</h5>
+          <ul>
+            <li style="color: rgb(255, 255, 255);"><a href="#" style="color: rgb(255, 255, 255);text-decoration: none;"><i class="bi bi-geo m-2"></i>Banglore</a></li>
+            <li style="color: rgb(255, 255, 255);"><a href="#" style="color: rgb(255, 255, 255);text-decoration: none;"><i class="bi bi-telephone m-2"></i>0481-0772255</a></li>
+            <li style="color: rgb(255, 255, 255);"><a href="#" style="color: rgb(255, 255, 255);text-decoration: none;"><i class="bi bi-instagram m-2"></i><i class="bi bi-facebook m-2"></i><i class="bi bi-twitter m-2"></i><i class="bi bi-linkedin m-2"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <h5 class="text-title" style="color: rgb(255, 255, 255);margin-top: 50px;">Connect with Us</h5>
+         
+          <p style="color: rgb(255, 255, 255);"><p style="color: rgb(255, 255, 255);text-decoration: none;">Subscribe our email for <br>more updates </p></p>
+          <p style="color: rgb(255, 255, 255);">
+            <nav class="navbar">
+              <div class="container-fluid" style="background: transparent;">
+                <form class="d-flex" role="search">
+                  <input class="text-dark me-2" type="search" style="border: solid 1px aqua; background-color: white;" placeholder="Email" aria-label="Search">
+                  <button class="btn btn-outline-info" type="submit">Subscribe</button>
+                </form>
+              </div>
+              
+            </nav>
+          </p>
+                 
+          
+        </div>
+      </div>
+    </div>
+  
+  
+  <div class="card-footer" style="height: 45px; background-color: rgb(12, 12, 30);">
+    <p class="text-white text-center"><i class="bi bi-info-circle"></i>Myblog.com | All rights reserved | myblog@gmail.com</p>
+  </div>
+  
+</section> 
+
+{% endblock %}
+
+
+<!-- <section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-6">
+        <img src="{% static 'images/ad2.png' %}" style="height: 180px;width: 1024px;" alt="">
+      </div>
+      <div class="col-lg-4"></div>
+    </div>
+  </div>
+</section> -->

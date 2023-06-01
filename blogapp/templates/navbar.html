@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-lg-3" href="#" style="font-family:'Rampart One', cursive;font-size: xx-large;">MyBlog</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="{% url 'contact' %}">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="{% url 'newpost' %}">Create Post</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="{% url 'login' %}">Signin</a>
+          </li>
+        </ul>
+        <form class="d-flex ms-lg-3" role="search">
+          <input class=" me-1 text-dark" type="search" placeholder="Search..." style="border: solid 1px aqua; background-color: white;" aria-label="Search">
+          <button class="btn" type="submit" style="color: aqua;"><i class="bi bi-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
